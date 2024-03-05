@@ -18,14 +18,17 @@ function newPlayer(name) {
     frontDiv.classList.add('row-md', 'd-flex', 'flex-column', 'flex-md-row')
     backDiv.id = `${name}Back`
     backDiv.classList.add('row-md', 'd-flex', 'flex-column', 'flex-md-row')
-    let nameDivFront =document.createElement('div')
+    let nameDivFront = document.createElement('div')
     nameDivFront.classList.add('col-md-2', 'p-2', 'border', 'border-light-subtle', 'text-white')
     nameDivFront.textContent = name
-    let nameDivBack =document.createElement('div')
+    let nameDivBack = document.createElement('div')
     nameDivBack.classList.add('col-md-2', 'p-2', 'border', 'border-light-subtle', 'text-white')
     nameDivBack.textContent = name
     frontDiv.append(nameDivFront)
     backDiv.append(nameDivBack)
+    let inDiv = document.createElement('div')
+    inDiv.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
+    backDiv.append(inDiv)
     for (i=0; i<9; i++) {
         let div = document.createElement('div')
         div.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
@@ -44,14 +47,13 @@ function newPlayer(name) {
         div.append(inputElement)
         backDiv.append(div)
     }
-    let endDiv = document.createElement('div')
-    endDiv.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
-    frontDiv.append(endDiv)
-    for (i=0; i<2; i++) {
-        let div = document.createElement('div')
-        div.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
-        backDiv.append(div)
-    }
+    let outDivFront = document.createElement('div')
+    outDivFront.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
+    frontDiv.append(outDivFront)
+    let outDivBack = document.createElement('div')
+    outDivBack.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
+    backDiv.append(outDivBack)
+    
     scoreCardFront.append(frontDiv)
     scoreCardBack.append(backDiv)
 }
