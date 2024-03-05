@@ -5,3 +5,52 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+.no-display {
+  display: none;
+}
+.active-display {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: solid 2px black;
+  border-radius: 10px;
+  background-color: rgb(148 163 184);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+.hide-overlay {
+  display: none;
+}
+.active-overlay {
+  position: fixed;
+  left:0;
+  top:0;
+  width:100vw;
+  height:100vh;
+  background-color:#000;
+  opacity:0.5;
+}
+#newPlayerName {
+  border-radius: 5px;
+  padding: .5rem;
+  color: black;
+  text-align: center;
+}
+#addPlayer, #fullPlayersButton {
+  background-color: green;
+  border: solid 1px black;
+  margin: .5rem;
+  border-radius: 5px;
+  padding: .5rem;
+}
+#cancelNewPlayer {
+  background-color: red;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: .5rem;
+}
