@@ -12,61 +12,59 @@
         <h1>Golf App</h1>
     </header>
     <div id="main-content" class="">
-        <div id="score-card-container" class="container text-center flex-sm-coloumn">
-            <div class="row">
-                <div id="table-header" class="col-12"></div>
+        <div id="course-name"></div>
+        <div id="score-card-container" class="container text-center my-3 mx-auto d-flex flex-md-column">
+            <div id="hole" class="row d-flex flex-column flex-md-row">
+                <div class="col-2 p-2 bg-subtle border border-dark-subtle">Hole</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">1</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">2</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">3</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">4</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">5</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">6</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">7</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">8</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">9</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle">Out</div>
             </div>
-            <div id="hole" class="row">
-                <div class="col-2 bg-subtle border border-dark-subtle">Hole</div>
-                <div class="col bg-subtle border border-dark-subtle">1</div>
-                <div class="col bg-subtle border border-dark-subtle">2</div>
-                <div class="col bg-subtle border border-dark-subtle">3</div>
-                <div class="col bg-subtle border border-dark-subtle">4</div>
-                <div class="col bg-subtle border border-dark-subtle">5</div>
-                <div class="col bg-subtle border border-dark-subtle">6</div>
-                <div class="col bg-subtle border border-dark-subtle">7</div>
-                <div class="col bg-subtle border border-dark-subtle">8</div>
-                <div class="col bg-subtle border border-dark-subtle">9</div>
-                <div class="col bg-subtle border border-dark-subtle">Out</div>
+            <div id="yardage" class="row d-flex flex-column flex-md-row">
+                <div class="col-2 p-2 bg-subtle border border-dark-subtle">Yardage</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
             </div>
-            <div id="yardage" class="row">
-                <div class="col-2 bg-subtle border border-dark-subtle">Yardage</div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
+            <div id="par" class="row d-flex flex-column flex-md-row">
+                <div class="col-2 p-2 bg-subtle border border-dark-subtle">Par</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
             </div>
-            <div id="par" class="row">
-                <div class="col-2 bg-subtle border border-dark-subtle">Par</div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-            </div>
-            <div id="Handicap" class="row">
-                <div class="col-2 bg-subtle border border-dark-subtle">Handicap</div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
-                <div class="col bg-subtle border border-dark-subtle"></div>
+            <div id="Handicap" class="row d-flex flex-column flex-md-row">
+                <div class="col-2 p-2 bg-subtle border border-dark-subtle">Handicap</div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
+                <div class="col p-2 bg-subtle border border-dark-subtle"></div>
             </div>
         </div>
     </div>
