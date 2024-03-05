@@ -12,15 +12,22 @@
 <body class="bg-success">
     <header class="col text-center bg-dark-subtle p-2">
         <h1>Golf App</h1>
-        <button type="button" class="btn btn-primary" id="newPlayer">New Player</button>
     </header>
-    <div id="main-content" class="">
-        <div id="courses" class="row justify-content-center">
-            <button id="11819" class="col-3 m-2 p-1 rounded-pill">Thanksgiving Point Golf Course</button>
-            <button id="18300" class="col-3 m-2 p-1 rounded-pill">Fox Hollow Golf Course</button>
-            <button id="19002" class="col-3 m-2 p-1 rounded-pill">Spanish Oaks Golf Course</button>
+    <div id="main-content" class="d-flex flex-column align-items-center">
+        <div id="tees" class="row justify-content-center">
+            <h1 class="text-center text-white">Select Tee Type:</h1>
+            <button id="tee" class="col-4 m-2 p-1 rounded-pill">Pro</button>
+            <button id="tee" class="col-4 m-2 p-1 rounded-pill">Champion</button>
+            <button id="tee" class="col-4 m-2 p-1 rounded-pill">Men</button>
+            <button id="tee" class="col-4 m-2 p-1 rounded-pill">Women</button>
         </div>
-        <div id="course-name"></div>
+        <div id="courses" class="no-display">
+            <h1 class="text-center text-white">Select Course:</h1>
+            <button id="11819" class="course col-3 m-2 p-1 rounded-pill">Thanksgiving Point Golf Course</button>
+            <button id="18300" class="course col-3 m-2 p-1 rounded-pill">Fox Hollow Golf Course</button>
+            <button id="19002" class="course col-3 m-2 p-1 rounded-pill">Spanish Oaks Golf Course</button>
+        </div>
+        <button type="button" class="no-display" id="newPlayer">New Player</button>
         <div id="scoreCardFront" class="container text-center my-3 p-1 d-flex flex-md-column">
             <div id="hole" class="row-md d-flex flex-column flex-md-row">
                 <div class="col-md-2 p-2 border border-light-subtle text-white">Hole</div>
