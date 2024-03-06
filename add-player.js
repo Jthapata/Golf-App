@@ -11,51 +11,17 @@ const overlay = document.getElementById('overlay')
 
 let players = []
 
+//row-md d-flex flex-column flex-md-row
 function newPlayer(name) {
-    let frontDiv = document.createElement('div')
-    let backDiv = document.createElement('div')
-    frontDiv.id = `${name}Front`
-    frontDiv.classList.add('row-md', 'd-flex', 'flex-column', 'flex-md-row')
-    backDiv.id = `${name}Back`
-    backDiv.classList.add('row-md', 'd-flex', 'flex-column', 'flex-md-row')
-    let nameDivFront = document.createElement('div')
-    nameDivFront.classList.add('col-md-2', 'p-2', 'border', 'border-light-subtle', 'text-white')
-    nameDivFront.textContent = name
-    let nameDivBack = document.createElement('div')
-    nameDivBack.classList.add('col-md-2', 'p-2', 'border', 'border-light-subtle', 'text-white')
-    nameDivBack.textContent = name
-    frontDiv.append(nameDivFront)
-    backDiv.append(nameDivBack)
-    let inDiv = document.createElement('div')
-    inDiv.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
-    backDiv.append(inDiv)
-    for (i=0; i<9; i++) {
-        let div = document.createElement('div')
-        div.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
-        let inputElement = document.createElement('input')
-        inputElement.classList.add('form-control', 'text-center')
-        inputElement.type = 'number'
-        div.append(inputElement)
-        frontDiv.append(div)
-    }
-    for (i=0; i<9; i++) {
-        let div = document.createElement('div')
-        div.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
-        let inputElement = document.createElement('input')
-        inputElement.classList.add('form-control', 'text-center')
-        inputElement.type = 'number'
-        div.append(inputElement)
-        backDiv.append(div)
-    }
-    let outDivFront = document.createElement('div')
-    outDivFront.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
-    frontDiv.append(outDivFront)
-    let outDivBack = document.createElement('div')
-    outDivBack.classList.add('col', 'p-2', 'border', 'border-light-subtle', 'text-white')
-    backDiv.append(outDivBack)
-    
-    scoreCardFront.append(frontDiv)
-    scoreCardBack.append(backDiv)
+    let newPlayerId = `player${players.length}`
+    let newPlayerFront = `${newPlayerId}Front`
+    let newPlayerBack = `${newPlayerId}Back`
+    let frontElement = document.getElementById(newPlayerFront)
+    let backElement = document.getElementById(newPlayerBack)
+    frontElement.className = 'row-md d-flex flex-column flex-md-row'
+    backElement.className = 'row-md d-flex flex-column flex-md-row'
+    frontElement.querySelector('.col-md-2').textContent = name
+    backElement.querySelector('.col-md-2').textContent = name
 }
 
 newPlayerBtn.addEventListener('click', () => {
