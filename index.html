@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="main.js"></script>
     <script defer src="add-player.js"></script>
+    <script defer src="update-table.js"></script>
 </head>
 <body class="bg-success">
     <header class="col text-center bg-dark-subtle p-2">
@@ -44,42 +45,42 @@
             </div>
             <div id="yardage" class="row-md d-flex flex-column flex-md-row">
                 <div class="col-md-2 p-2 border border-light-subtle text-white">Yardage</div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div id="frontYardOut" class="col p-2 border border-light-subtle text-white"></div>
             </div>
             <div id="par" class="row-md d-flex flex-column flex-md-row">
                 <div class="col-md-2 p-2 border border-light-subtle text-white">Par</div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div id="frontParOut" class="col p-2 border border-light-subtle text-white"></div>
             </div>
-            <div id="Handicap" class="row-md d-flex flex-column flex-md-row">
+            <div id="handicap" class="row-md d-flex flex-column flex-md-row">
                 <div class="col-md-2 p-2 border border-light-subtle text-white">Handicap</div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div id="frontHcpOut" class="col p-2 border border-light-subtle text-white"></div>
             </div>
         </div>
         <div id="scoreCardBack" class="container text-center my-3 p-1 d-flex flex-md-column">
@@ -99,45 +100,45 @@
             </div>
             <div id="yardage" class="row-md d-flex flex-column flex-md-row">
                 <div class="col-md-2 p-2 border border-light-subtle text-white">Yardage</div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
+                <div id="yardIn" class="col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div class="yardage col p-2 border border-light-subtle text-white"></div>
+                <div id="backYardOut" class="col p-2 border border-light-subtle text-white"></div>
             </div>
             <div id="par" class="row-md d-flex flex-column flex-md-row">
                 <div class="col-md-2 p-2 border border-light-subtle text-white">Par</div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
+                <div id="parIn" class="col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div class="par col p-2 border border-light-subtle text-white"></div>
+                <div id="backParOut" class="col p-2 border border-light-subtle text-white"></div>
             </div>
-            <div id="Handicap" class="row-md d-flex flex-column flex-md-row">
+            <div id="handicap" class="row-md d-flex flex-column flex-md-row">
                 <div class="col-md-2 p-2 border border-light-subtle text-white">Handicap</div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
-                <div class="col p-2 border border-light-subtle text-white"></div>
+                <div id="hcpIn" class="col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div class="handicap col p-2 border border-light-subtle text-white"></div>
+                <div id="backHcpOut" class="col p-2 border border-light-subtle text-white"></div>
             </div>
         </div>
     </div>
