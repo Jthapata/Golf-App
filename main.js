@@ -38,6 +38,7 @@ courseBtns.forEach((button) => {
         courses.innerHTML = `<h3 class="text-center text-white">Course: ${button.textContent}</h3>`
         newPlayerButton.className = 'm-2'
         newPlayerButton.classList.add('p-2', 'rounded-pill')
+        newPlayerButton.click()
         displayCourseInfo(courseId)
     })
 })
