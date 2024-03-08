@@ -29,7 +29,6 @@ frontElementArray.forEach((input) => {
     })
 })
 
-
 let backElementArray = []
 for (i=0; i<4; i++) {
     let elements = document.querySelectorAll(`.player${i+1}Back`)
