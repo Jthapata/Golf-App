@@ -10,37 +10,48 @@ const display = document.getElementById('test')
 const yardageElements = document.querySelectorAll('.yardage')
 const parElements = document.querySelectorAll('.par')
 const handicapElements = document.querySelectorAll('.handicap')
-const backYardOut = document.getElementById('backYardOut')
-const backParOut = document.getElementById('backParOut')
-const backHcpOut = document.getElementById('backHcpOut')
+const yardTotal = document.getElementById('yardTotal')
+const parTotal = document.getElementById('parTotal')
+const hcpTotal = document.getElementById('hcpTotal')
 const frontYardOut = document.getElementById('frontYardOut')
 const frontParOut = document.getElementById('frontParOut')
 const frontHcpOut = document.getElementById('frontHcpOut')
 const yardIn = document.getElementById('yardIn')
 const parIn = document.getElementById('parIn')
 const hcpIn = document.getElementById('hcpIn')
+const noTee = document.getElementById('noTee')
+const noTeeButton = document.getElementById('noTeeButton')
 
 let yardages = []
 let pars = []
 let handicaps = []
 
-teeBtns.forEach((button) => {
-    button.addEventListener('click', () => {
-        selectedTeeType = button.textContent.toLowerCase()
-        tees.innerHTML =`<h3 class="text-center text-white">Tee Type: ${button.textContent}</h3>`
-        courses.className = 'row'
-        courses.classList.add('justify-content-center')
-    })
-})
 courseBtns.forEach((button) => {
     button.addEventListener('click', () => {
         courseId = button.id
         courses.innerHTML = `<h3 class="text-center text-white">Course: ${button.textContent}</h3>`
+        tees.className = 'row'
+        tees.classList.add('justify-content-center')
+    })
+})
+teeBtns.forEach((button) => {
+    button.addEventListener('click', () => {
+        selectedTeeType = button.textContent.toLowerCase()
+        if (selectedTeeType === 'pro' && courseId === '19002') {
+            noTee.className = 'active-display'
+            overlay.className = 'active-overlay'
+            return
+        }
+        tees.innerHTML =`<h3 class="text-center text-white">Tee Type: ${button.textContent}</h3>`
         newPlayerButton.className = 'm-2'
         newPlayerButton.classList.add('p-2', 'rounded-pill')
         newPlayerButton.click()
         displayCourseInfo(courseId)
     })
+})
+noTeeButton.addEventListener('click', () => {
+    noTee.className = 'no-display'
+    overlay.className = 'hide-overlay'
 })
 
 async function displayCourseInfo(id) {
@@ -79,9 +90,9 @@ async function displayCourseInfo(id) {
         halfPar += Number(pars[i])
         halfHcp += Number(handicaps[i])
     }
-    backYardOut.textContent = totalYard
-    backParOut.textContent = totalPar
-    backHcpOut.textContent = totalHcp
+    yardTotal.textContent = totalYard
+    parTotal.textContent = totalPar
+    hcpTotal.textContent = totalHcp
     frontYardOut.textContent = halfYard
     frontParOut.textContent = halfPar
     frontHcpOut.textContent = halfHcp

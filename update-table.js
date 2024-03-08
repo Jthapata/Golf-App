@@ -36,9 +36,9 @@ for (i=0; i<4; i++) {
         backElementArray.push(item)
     }
 }
-let backOutArray = []
+let totalArray = []
 for (i=0; i<4; i++) {
-    backOutArray.push(document.querySelector(`#player${i+1}BackOut`))
+    totalArray.push(document.querySelector(`#player${i+1}Total`))
 }
 backElementArray.forEach((input) => {
     input.addEventListener('change', () => {
@@ -53,7 +53,7 @@ backElementArray.forEach((input) => {
         let inId = `${playerNumber}FrontIn`
         let inElement = document.getElementById(inId)
         value += Number(inElement.textContent)
-        for (item of backOutArray) {
+        for (item of totalArray) {
             if (item.id.includes(input.classList[0])) {
                 item.textContent = value
             }
