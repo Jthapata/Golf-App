@@ -5,9 +5,12 @@ for (i=0; i<4; i++) {
         frontElementArray.push(item)
     }
 }
-let frontOutArray = []
+let backElementArray = []
 for (i=0; i<4; i++) {
-    frontOutArray.push(document.querySelector(`#player${i+1}FrontOut`))
+    let elements = document.querySelectorAll(`.player${i+1}Back`)
+    for (item of elements) {
+        backElementArray.push(item)
+    }
 }
 
 frontElementArray.forEach((input) => {
@@ -18,24 +21,10 @@ frontElementArray.forEach((input) => {
                 value += Number(element.value)
             }
         }
-        for (element of frontOutArray) {
-            if (element.id.includes(input.classList[0])) {
-                element.textContent = value
-                let inId = `${input.classList[0]}In`
-                let inElement = document.getElementById(inId)
-                inElement.textContent = element.textContent
-            }
-        }
+        document.getElementById(`${input.classList[0]}Out`).textContent = value
+        document.getElementById(`${input.classList[0]}In`).textContent = value
     })
 })
-
-let backElementArray = []
-for (i=0; i<4; i++) {
-    let elements = document.querySelectorAll(`.player${i+1}Back`)
-    for (item of elements) {
-        backElementArray.push(item)
-    }
-}
 backElementArray.forEach((input) => {
     input.addEventListener('keyup', (event) => {
         updateTable(event, input)
