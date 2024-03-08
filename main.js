@@ -31,7 +31,7 @@ courseBtns.forEach((button) => {
         courseId = button.id
         courses.innerHTML = `<h3 class="text-center text-white">Course: ${button.textContent}</h3>`
         tees.className = 'row'
-        tees.classList.add('justify-content-center')
+        tees.classList.add('justify-content-center', 'vw-100')
     })
 })
 teeBtns.forEach((button) => {

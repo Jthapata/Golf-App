@@ -11,7 +11,7 @@ for (i=0; i<4; i++) {
 }
 
 frontElementArray.forEach((input) => {
-    input.addEventListener('change', () => {
+    input.addEventListener('keyup', () => {
         let value = 0
         for (element of frontElementArray) {
             if (element.classList[0] === input.classList[0]) {
@@ -36,27 +36,25 @@ for (i=0; i<4; i++) {
         backElementArray.push(item)
     }
 }
-let totalArray = []
-for (i=0; i<4; i++) {
-    totalArray.push(document.querySelector(`#player${i+1}Total`))
-}
 backElementArray.forEach((input) => {
-    input.addEventListener('change', () => {
-        let value = 0
-        for (element of backElementArray) {
-            if (element.classList[0] === input.classList[0]) {
-                value += Number(element.value)
-            }
-        }
-        let playerClass = String(input.classList[0])
-        let playerNumber = playerClass.slice(0,-4)
-        let inId = `${playerNumber}FrontIn`
-        let inElement = document.getElementById(inId)
-        value += Number(inElement.textContent)
-        for (item of totalArray) {
-            if (item.id.includes(input.classList[0])) {
-                item.textContent = value
-            }
-        }
+    input.addEventListener('keyup', (event) => {
+        updateTable(event, input)
     })
 })
+
+function updateTable(event, input) {
+    let parent = event.target.closest(`#${input.classList[0]}`)
+    let children = parent.children
+    let inElement = children[1]
+    let total = children[11]
+    let siblings = []
+    for (i=2; i<11; i++) {
+        siblings.push(children[i])
+    }
+    let value = 0
+    for (sibling of siblings) {
+        value += Number(sibling.children[0].value)
+    }
+    value += Number(inElement.textContent)
+    total.textContent = value
+}
