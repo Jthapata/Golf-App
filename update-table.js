@@ -23,6 +23,11 @@ frontElementArray.forEach((input) => {
         }
         document.getElementById(`${input.classList[0]}Out`).textContent = value
         document.getElementById(`${input.classList[0]}In`).textContent = value
+        let currentClass = input.classList[0]
+        let backClass = `${currentClass.slice(0, 7)}Back`
+        let backElementRow = document.querySelector(`#${backClass}`)
+        let backElement = backElementRow.children[2].children[0]
+        backElement.dispatchEvent(new KeyboardEvent('keyup'));
     })
 })
 backElementArray.forEach((input) => {
