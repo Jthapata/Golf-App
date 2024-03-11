@@ -1,1 +1,2 @@
 # Golf-App
+This is a simple golf score app that pulls course data from an api. This app allows users to select a course and a tee type, and then fills out the scorecard with the relevant data from the selected course and tee type. I used vanilla JavaScript and the fetch api call for the funcionality of the app. I used Bootstrap and vanilla CSS for the design of the page.
